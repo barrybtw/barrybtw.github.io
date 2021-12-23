@@ -1,7 +1,7 @@
 import { BiArch } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { countContext } from "../contexts";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";

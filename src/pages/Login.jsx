@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { countContext } from "../contexts";
 //Firebase
 import { auth, provider } from "../firebase";
-import { signInWithPopup, signOut } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
 
 export const Login = () => {
   const navigate = useNavigate();

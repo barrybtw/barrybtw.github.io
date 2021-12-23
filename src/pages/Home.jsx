@@ -4,7 +4,7 @@ import { getRandomNumber } from "../helpers/randomNum";
 import { auth, db } from "../firebase";
 import { DoubbleBubble } from "../components/Loading.Spinner";
 import { FcFullTrash } from "react-icons/fc";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { countContext } from "../contexts";
 
 export const Home = () => {
