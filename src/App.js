@@ -27,6 +27,7 @@ function App() {
             <Route path="/*" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="newpost" element={<NewPost />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </ContainerCell>
       </countContext.Provider>
