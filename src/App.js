@@ -8,7 +8,7 @@ import { GlobalTheme } from "./styles/GlobalTheme";
 
 import { ContainerCell } from "./components/ContainerCell";
 
-import { Navigationbar } from "./components/Navigationbar";
+import { Navigationbar } from "./components/Navigationbar/Navigationbar";
 
 import { Login, NewPost, Home } from "./pages";
 
@@ -16,11 +16,14 @@ function App() {
   //CONTEXT API
   const [count, setCount] = useState(0);
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [reRender, setReRender] = useState(true);
   //CONTEXT API
   return (
     <Router>
       <GlobalTheme /> {/* Global Theme */}
-      <countContext.Provider value={{ count, setCount, isAuth, setIsAuth }}>
+      <countContext.Provider
+        value={{ count, setCount, isAuth, setIsAuth, reRender, setReRender }}
+      >
         <ContainerCell>
           <Navigationbar />
           <Routes>

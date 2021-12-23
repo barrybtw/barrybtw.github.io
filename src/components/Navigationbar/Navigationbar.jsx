@@ -1,29 +1,10 @@
-import { BiArch } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { useContext } from "react";
-import { countContext } from "../contexts";
+import { countContext } from "../../contexts";
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 1rem;
-  line-height: normal;
-
-  color: #353535;
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: clamp(1rem, 5rem, 100rem);
-  }
-`;
+import { Mobile } from "./Navigationbar.styled";
 
 export const Navigationbar = () => {
   const { setIsAuth } = useContext(countContext);
@@ -72,13 +53,11 @@ export const Navigationbar = () => {
     return <>{isAuth ? <ArrayIsAuth /> : <ArrayIsNotAuth />}</>;
   };
   return (
-    <Nav>
-      <div>
-        <BiArch fontSize={60} />
-      </div>
+    <Mobile>
+      <h1>The Archway Project</h1>
       <ul>
         <ArrayNavBar />
       </ul>
-    </Nav>
+    </Mobile>
   );
 };
