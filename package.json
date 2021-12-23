@@ -1,6 +1,6 @@
 {
   "name": "blogsite-react",
-  "homepage": "http://barrybtw.github.io/react-blog",
+  "homepage": "http://barrybtw.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
